@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="FactoryPlanner.csproj" Id="2b6be687-459d-4bba-81c7-e96e70ded3bb" />
+  <Project Path="Tests/Tests.csproj" Id="26985be7-8d47-4ab2-8f11-4b2dc934a6c0" />
+</Solution>
