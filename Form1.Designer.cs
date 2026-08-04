@@ -119,6 +119,7 @@
             this.comboBoxRecipe.Name = "comboBoxRecipe";
             this.comboBoxRecipe.Size = new System.Drawing.Size(451, 21);
             this.comboBoxRecipe.TabIndex = 8;
+            this.comboBoxRecipe.SelectedIndexChanged += new System.EventHandler(this.comboBoxRecipe_SelectedIndexChanged);
             // 
             // label5
             // 

@@ -77,8 +77,7 @@ namespace FactoryPlanner
         private void buttonGo_Click(object sender, EventArgs e)
         {
             var quantity = (double)numericUpDownQuantity.Value;
-            var recipeText = comboBoxRecipe.SelectedItem;
-            var recipe = recipes.Where(r => string.Equals(r.ToString(), recipeText)).FirstOrDefault();
+            var recipe = FindSelectedRecipe();
             if (recipe != null)
             {
                 var material = (string)comboBoxMaterials.SelectedItem;
@@ -102,6 +101,19 @@ namespace FactoryPlanner
 
         private const string StarRupture = "Star Rupture";
 
+        private void comboBoxRecipe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var recipe = FindSelectedRecipe();
+            if (recipe != null)
+            {
+                numericUpDownQuantity.Value = (decimal)recipe.Outputs[0].Rate;
+            }
+        }
 
+        private Recipe FindSelectedRecipe()
+        {
+            var recipeText = comboBoxRecipe.SelectedItem;
+            return recipes.Where(r => string.Equals(r.ToString(), recipeText)).FirstOrDefault();
+        }
     }
 }
