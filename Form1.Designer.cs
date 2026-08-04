@@ -39,6 +39,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.numericUpDownQuantity = new System.Windows.Forms.NumericUpDown();
             this.buttonGo = new System.Windows.Forms.Button();
+            this.buttonGraph = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,11 +151,22 @@
             this.buttonGo.UseVisualStyleBackColor = true;
             this.buttonGo.Click += new System.EventHandler(this.buttonGo_Click);
             // 
+            // buttonGraph
+            // 
+            this.buttonGraph.Location = new System.Drawing.Point(707, 27);
+            this.buttonGraph.Name = "buttonGraph";
+            this.buttonGraph.Size = new System.Drawing.Size(75, 23);
+            this.buttonGraph.TabIndex = 12;
+            this.buttonGraph.Text = "Graph";
+            this.buttonGraph.UseVisualStyleBackColor = true;
+            this.buttonGraph.Click += new System.EventHandler(this.buttonGraph_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonGraph);
             this.Controls.Add(this.buttonGo);
             this.Controls.Add(this.numericUpDownQuantity);
             this.Controls.Add(this.label5);
@@ -186,6 +198,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown numericUpDownQuantity;
         private System.Windows.Forms.Button buttonGo;
+        private System.Windows.Forms.Button buttonGraph;
     }
 }
 

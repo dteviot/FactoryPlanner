@@ -64,10 +64,6 @@ namespace FactoryPlanner
             comboBoxMaterials.SelectedIndex = 0;
         }
 
-        private List<Models.Recipe> recipes;
-
-        private const string StarRupture = "Star Rupture";
-
         private void comboBoxGame_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxGame.SelectedIndex == 0)
@@ -87,10 +83,25 @@ namespace FactoryPlanner
             {
                 var material = (string)comboBoxMaterials.SelectedItem;
                 var builder = new ProductionPlanBuilder();
-                var plan = builder.BuildPlan(recipes, material, quantity, recipe);
+                plan = builder.BuildPlan(recipes, material, quantity, recipe);
                 string formattedPlan = builder.FormatPlan(plan);
                 textBoxRecipes.Text = formattedPlan;
             }
         }
+
+        private void buttonGraph_Click(object sender, EventArgs e)
+        {
+            using (var dlg = new GraphDlg(plan))
+            {
+                dlg.ShowDialog(this);
+            }
+        }
+
+        private List<Models.Recipe> recipes;
+        private List<ProductionStep> plan;
+
+        private const string StarRupture = "Star Rupture";
+
+
     }
 }

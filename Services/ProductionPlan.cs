@@ -45,6 +45,8 @@ namespace FactoryPlanner.Services
     {
         public int Depth { get; set; }
 
+        public int ID { get; set; }
+
         /// <summary>
         /// The recipe used in this step
         /// </summary>

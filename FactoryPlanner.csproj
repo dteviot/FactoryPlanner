@@ -40,6 +40,21 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.4</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.Msagl">
+      <Version>1.1.6</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Msagl.Drawing">
+      <Version>1.1.6</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Msagl.GraphViewerGDI">
+      <Version>1.1.7</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="System.Resources.Extensions">
+      <Version>10.0.10</Version>
+    </PackageReference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,6 +73,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphDlg.Designer.cs">
+      <DependentUpon>GraphDlg.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
