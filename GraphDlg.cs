@@ -1,4 +1,5 @@
-﻿using FactoryPlanner.Services;
+﻿using FactoryPlanner.Models;
+using FactoryPlanner.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,7 +52,9 @@ namespace FactoryPlanner
                 {
                     graph.AddEdge(flow.Producer.ID.ToString(), flow.ToString(), step.ID.ToString());
                 }
-                graph.FindNode(step.ID.ToString()).Label.Text = step.ToString();
+                var node = graph.FindNode(step.ID.ToString());
+                node.Label.Text = step.ToString();
+                ColourCodeStep(step, node);
             }
 
             //graph.AddEdge("A", "C").Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
@@ -60,6 +63,24 @@ namespace FactoryPlanner
             //Microsoft.Msagl.Drawing.Node c = graph.FindNode("C");
             //c.Attr.FillColor = Microsoft.Msagl.Drawing.Color.PaleGreen;
             //c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Diamond;
+        }
+
+        private void ColourCodeStep(ProductionStep step, Microsoft.Msagl.Drawing.Node node)
+        {
+            double surplus = step.GetSurplus();
+            double productionRate = step.GetProductionRate(step.TargetMaterial.Name);
+            if (surplus == 0)
+            {
+                node.Attr.FillColor = Microsoft.Msagl.Drawing.Color.MistyRose;
+            }
+            else if (surplus < productionRate * 0.1)
+            {
+                node.Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightYellow;
+            }
+            else if(productionRate * 0.5 <= surplus)
+            {
+                node.Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightGreen;
+            }
         }
     }
 }

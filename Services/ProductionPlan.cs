@@ -124,6 +124,8 @@ namespace FactoryPlanner.Services
             return surplus;
         }
 
+        public double GetSurplus(){ return GetSurplus(TargetMaterial.Name); }
+
         public override string ToString()
         {
             var name = TargetMaterial.Name;
