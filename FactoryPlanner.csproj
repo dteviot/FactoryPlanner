@@ -85,6 +85,7 @@
     <Compile Include="Models\Recipe.cs" />
     <Compile Include="Models\RecipeMaterial.cs" />
     <Compile Include="Services\ProductionPlan.cs" />
+    <Compile Include="Services\SpreadsheetBuilder.cs" />
     <Compile Include="Services\StarRuptureHtmlParser.cs" />
     <Compile Include="Services\Utils.cs" />
     <EmbeddedResource Include="Form1.resx">

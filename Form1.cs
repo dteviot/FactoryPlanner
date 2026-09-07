@@ -115,5 +115,23 @@ namespace FactoryPlanner
             var recipeText = comboBoxRecipe.SelectedItem;
             return recipes.Where(r => string.Equals(r.ToString(), recipeText)).FirstOrDefault();
         }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Title = "Save as SpreadsheetML";
+                saveFileDialog.Filter = "SpreadsheetML files (*.xml)|*.xml|All files (*.*)|*.*";
+                saveFileDialog.DefaultExt = "xml";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    var sb = new SpreadsheetBuilder();
+                    sb.Build(plan);
+                    sb.Save(saveFileDialog.FileName);
+                    MessageBox.Show("File Saved");
+                }
+            }
+        }
     }
 }
