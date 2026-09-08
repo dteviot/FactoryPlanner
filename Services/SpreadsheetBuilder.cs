@@ -64,7 +64,6 @@ namespace FactoryPlanner.Services
 
         private class Column
         {
-            public string id;
             public string label;
             public int index;
         }
@@ -149,15 +148,20 @@ namespace FactoryPlanner.Services
 
         private void AddMaterialsToRow(ProductionStep step, Row row)
         {
+            var newCells = new List<Cell>();
             foreach (var material in step.Recipe.Outputs)
             {
                 var column = AddColumn(material.Name);
-                row.AddCell(MakeFormulaCell(rows.Count(), material.Rate, step.MachinesRequired, column));
+                newCells.Add(MakeFormulaCell(rows.Count(), material.Rate, step.MachinesRequired, column));
             }
             foreach (var material in step.Recipe.Inputs)
             {
                 var column = AddColumn(material.Name);
-                row.AddCell(MakeFormulaCell(rows.Count(), -material.Rate, step.MachinesRequired, column));
+                newCells.Add(MakeFormulaCell(rows.Count(), -material.Rate, step.MachinesRequired, column));
+            }
+            foreach (var cell in newCells.AsQueryable().OrderBy(c => c.index))
+            {
+                row.AddCell(cell);
             }
         }
 
@@ -186,7 +190,6 @@ namespace FactoryPlanner.Services
             {
                 column = new Column()
                 {
-                    id = NextColumnId(),
                     label = label,
                     index = columns.Count()
                 };
@@ -195,19 +198,6 @@ namespace FactoryPlanner.Services
                 columns.Add(column);
             }
             return column;
-        }
-
-        private string NextColumnId()
-        {
-            char toChar(int i) { return Convert.ToChar(i + 'A'); }
-            int num = columns.Count();
-            int mod = num / 26;
-            string s = "";
-            if (mod > 0)
-            {
-                s += toChar(mod);
-            }
-            return s + toChar(num % 26);
         }
 
         private Dictionary<String, Column> MaterialToColumn = new Dictionary<String, Column>();
