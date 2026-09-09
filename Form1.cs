@@ -85,19 +85,59 @@ namespace FactoryPlanner
                 plan = builder.BuildPlan(recipes, material, quantity, recipe);
                 string formattedPlan = builder.FormatPlan(plan);
                 textBoxRecipes.Text = formattedPlan;
+                PopulateSteps();
+            }
+        }
+
+        private void PopulateSteps()
+        {
+            comboBoxStep.Items.Clear();
+            foreach (var step in plan)
+            {
+                comboBoxStep.Items.Add(step);
+            }
+            if (0 < comboBoxStep.Items.Count)
+            {
+                comboBoxStep.SelectedIndex = 0;
+            }
+        }
+
+        private List<ProductionStep> CreateSubPlan(ProductionStep step)
+        {
+            var substeps = new HashSet<ProductionStep>();
+            AddToSubPlan(step, substeps);
+            return substeps.ToList();
+        }
+
+        private void AddToSubPlan(ProductionStep step, HashSet<ProductionStep> substeps)
+        {
+            if (!substeps.Contains(step))
+            {
+                substeps.Add(step);
+                foreach (var inflow in step.Inflows)
+                {
+                    AddToSubPlan(inflow.Producer, substeps);
+                }
             }
         }
 
         private void buttonGraph_Click(object sender, EventArgs e)
         {
+            var step = (ProductionStep)comboBoxStep.SelectedItem;
+            ShowGraph(CreateSubPlan(step));
+        }
+
+        private static void ShowGraph(List<ProductionStep> plan)
+        {
             using (var dlg = new GraphDlg(plan))
             {
-                dlg.ShowDialog(this);
+                dlg.ShowDialog();
             }
         }
 
-        private List<Models.Recipe> recipes;
-        private List<ProductionStep> plan;
+        private List<Models.Recipe> recipes = new List<Models.Recipe>();
+        private List<ProductionStep> plan = new List<ProductionStep>();
+
 
         private const string StarRupture = "Star Rupture";
 
@@ -108,6 +148,7 @@ namespace FactoryPlanner
             {
                 numericUpDownQuantity.Value = (decimal)recipe.Outputs[0].Rate;
             }
+            PopulateSteps();
         }
 
         private Recipe FindSelectedRecipe()
