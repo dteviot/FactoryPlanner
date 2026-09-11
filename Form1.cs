@@ -52,7 +52,7 @@ namespace FactoryPlanner
             var names = new HashSet<string>();
             foreach (var recipe in recipes)
             {
-                foreach (var material in recipe.Inputs)
+                foreach (var material in recipe.Outputs)
                 {
                     names.Add(material.Name);
                 }
@@ -102,36 +102,17 @@ namespace FactoryPlanner
             }
         }
 
-        private List<ProductionStep> CreateSubPlan(ProductionStep step)
-        {
-            var substeps = new HashSet<ProductionStep>();
-            AddToSubPlan(step, substeps);
-            return substeps.ToList();
-        }
-
-        private void AddToSubPlan(ProductionStep step, HashSet<ProductionStep> substeps)
-        {
-            if (!substeps.Contains(step))
-            {
-                substeps.Add(step);
-                foreach (var inflow in step.Inflows)
-                {
-                    AddToSubPlan(inflow.Producer, substeps);
-                }
-            }
-        }
-
         private void buttonGraph_Click(object sender, EventArgs e)
         {
             var step = (ProductionStep)comboBoxStep.SelectedItem;
-            ShowGraph(CreateSubPlan(step));
+            ShowGraph(step);
         }
 
-        private static void ShowGraph(List<ProductionStep> plan)
+        private void ShowGraph(ProductionStep step)
         {
-            using (var dlg = new GraphDlg(plan))
+            using (var dlg = new GraphDlg(step))
             {
-                dlg.ShowDialog();
+                dlg.ShowDialog(this);
             }
         }
 

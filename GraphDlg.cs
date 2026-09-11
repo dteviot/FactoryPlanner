@@ -14,19 +14,20 @@ namespace FactoryPlanner
 {
     public partial class GraphDlg : Form
     {
-        public GraphDlg(List<ProductionStep> plan)
+        public GraphDlg(ProductionStep step)
         {
             InitializeComponent();
-            RenderGraph(plan);
+            RenderGraph(step);
         }
 
-        public void RenderGraph(List<ProductionStep> plan)
+        public void RenderGraph(ProductionStep step)
         {
             //create a viewer object 
             Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
+            viewer.Click += GraphObject_Click;
             //create a graph object 
             Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
-            PlanToGraph(plan, graph);
+            PlanToGraph(step, graph);
 
             //bind the graph to the viewer 
             viewer.Graph = graph;
@@ -37,25 +38,23 @@ namespace FactoryPlanner
             this.ResumeLayout();
         }
 
-        private void PlanToGraph(List<ProductionStep> plan, Microsoft.Msagl.Drawing.Graph graph)
+        private void GraphObject_Click(object sender, EventArgs e)
         {
-            // give each step unique name
-            for(int i = 0; i < plan.Count; i++)
-            {
-                plan[i].ID = i;
-            }
+            var viewer = sender as Microsoft.Msagl.GraphViewerGdi.GViewer;
+            MouseEventArgs mouseEvent = (MouseEventArgs)e;
 
-            //create the graph content
-            foreach (var step in plan)
+            Microsoft.Msagl.Drawing.Node selectedNode = viewer.SelectedObject as Microsoft.Msagl.Drawing.Node;
+            if (selectedNode != null)
             {
-                foreach(var flow in step.Inflows)
-                {
-                    graph.AddEdge(flow.Producer.ID.ToString(), flow.ToString(), step.ID.ToString());
-                }
-                var node = graph.FindNode(step.ID.ToString());
-                node.Label.Text = step.ToString();
-                ColourCodeStep(step, node);
+                var dlg = new GraphDlg(selectedNode.UserData as ProductionStep);
+                dlg.ShowDialog(this);
             }
+        }
+
+        private void PlanToGraph(ProductionStep step, Microsoft.Msagl.Drawing.Graph graph)
+        {
+            var substeps = new HashSet<ProductionStep>();
+            AddStepToGraph(step, substeps, graph);
 
             //graph.AddEdge("A", "C").Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
             //graph.FindNode("A").Attr.FillColor = Microsoft.Msagl.Drawing.Color.Magenta;
@@ -63,6 +62,23 @@ namespace FactoryPlanner
             //Microsoft.Msagl.Drawing.Node c = graph.FindNode("C");
             //c.Attr.FillColor = Microsoft.Msagl.Drawing.Color.PaleGreen;
             //c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Diamond;
+        }
+
+        private void AddStepToGraph(ProductionStep step, HashSet<ProductionStep> substeps, Microsoft.Msagl.Drawing.Graph graph)
+        {
+            if (!substeps.Contains(step))
+            {
+                substeps.Add(step);
+                foreach (var flow in step.Inflows)
+                {
+                    graph.AddEdge(flow.Producer.ID.ToString(), flow.GraphLabel(), step.ID.ToString());
+                    AddStepToGraph(flow.Producer, substeps, graph);
+                }
+                var node = graph.FindNode(step.ID.ToString());
+                node.UserData = step;
+                node.Label.Text = step.GraphLabel();
+                ColourCodeStep(step, node);
+            }
         }
 
         private void ColourCodeStep(ProductionStep step, Microsoft.Msagl.Drawing.Node node)

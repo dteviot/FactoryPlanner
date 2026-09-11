@@ -32,6 +32,11 @@ namespace FactoryPlanner.Services
             return $"{Rate:F2}× {MaterialName}";
         }
 
+        public string GraphLabel()
+        {
+            return $"{MaterialName}\r\nx{Rate:F2} ";
+        }
+
         public ProductionStep Producer { get; set; }
         public ProductionStep Consumer { get; set; }
         public string MaterialName { get; set; }
@@ -129,7 +134,13 @@ namespace FactoryPlanner.Services
         public override string ToString()
         {
             var name = TargetMaterial.Name;
-            return $"{MachinesRequired:F2}× {Recipe.Machine} → {GetProductionRate(name):F2}:{GetOutflowRate(name):F2}/min {name} )";
+            return $"{MachinesRequired:F2}× {Recipe.Machine} → {GetProductionRate(name):F2}:{GetOutflowRate(name):F2}/min {name}";
+        }
+
+        public string GraphLabel()
+        {
+            var name = TargetMaterial.Name;
+            return $"{GetProductionRate(name):F2}:{GetOutflowRate(name):F2}/min {name}\r\n({Recipe.Machine} x{MachinesRequired})";
         }
 
         public double GetRate(string materialName, List<RecipeMaterial> collection)
@@ -172,6 +183,25 @@ namespace FactoryPlanner.Services
                 flow.IncreaseFlow(newMachines * inputMaterial.Rate);
             }
         }
+
+        public List<ProductionStep> CreateSubPlan()
+        {
+            var substeps = new HashSet<ProductionStep>();
+            AddToSubPlan(this, substeps);
+            return substeps.ToList();
+        }
+
+        private void AddToSubPlan(ProductionStep step, HashSet<ProductionStep> substeps)
+        {
+            if (!substeps.Contains(step))
+            {
+                substeps.Add(step);
+                foreach (var inflow in step.Inflows)
+                {
+                    AddToSubPlan(inflow.Producer, substeps);
+                }
+            }
+        }
     }
 
     /// <summary>
@@ -203,8 +233,17 @@ namespace FactoryPlanner.Services
             BuildPlanRecursive(recipes, targetMaterial, targetRatePerMinute, plan, visitedMaterials, 0, selectedRecipe);
             // add dummy outflow for tracking desired quantity
             plan[0].AddFlow(null, targetMaterial, targetRatePerMinute);
-
+            AddIdToSteps(plan);
             return plan;
+        }
+
+        private void AddIdToSteps(List<ProductionStep> plan)
+        {
+            // give each step a unique ID for graphing purposes
+            for (int i = 0; i < plan.Count; i++)
+            {
+                plan[i].ID = i;
+            }
         }
 
         /// <summary>
