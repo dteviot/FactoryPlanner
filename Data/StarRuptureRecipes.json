@@ -93,78 +93,78 @@
   {
     "Name": "",
     "Machine": "Assembler",
-    "Duration": 5,
+    "Duration": 6,
     "OutputBatchSize": 1,
     "Inputs": [
       {
         "Name": "Electronics",
-        "Rate": 24.0
+        "Rate": 10.0
       },
       {
         "Name": "Stator",
-        "Rate": 12.0
+        "Rate": 20.0
       },
       {
         "Name": "Battery",
-        "Rate": 12.0
+        "Rate": 10.0
       }
     ],
     "Outputs": [
       {
         "Name": "Accumulator",
-        "Rate": 12.0
+        "Rate": 10.0
       }
     ]
   },
   {
     "Name": "",
     "Machine": "Assembler",
-    "Duration": 15,
+    "Duration": 12,
     "OutputBatchSize": 1,
     "Inputs": [
       {
         "Name": "Resonator",
-        "Rate": 4.0
+        "Rate": 5.0
       },
       {
         "Name": "Pump",
-        "Rate": 12.0
+        "Rate": 5.0
       },
       {
         "Name": "Nanofibre",
-        "Rate": 32.0
+        "Rate": 20.0
       }
     ],
     "Outputs": [
       {
         "Name": "Condenser",
-        "Rate": 4.0
+        "Rate": 5.0
       }
     ]
   },
   {
     "Name": "",
     "Machine": "Assembler",
-    "Duration": 5,
+    "Duration": 6,
     "OutputBatchSize": 1,
     "Inputs": [
       {
         "Name": "Electromagnetic Coil",
-        "Rate": 36.0
+        "Rate": 30.0
       },
       {
         "Name": "Synthetic Resin",
-        "Rate": 36.0
+        "Rate": 30.0
       },
       {
         "Name": "Accumulator",
-        "Rate": 12.0
+        "Rate": 10.0
       }
     ],
     "Outputs": [
       {
         "Name": "Electromagnet",
-        "Rate": 12.0
+        "Rate": 10.0
       }
     ]
   },
@@ -193,26 +193,52 @@
   {
     "Name": "",
     "Machine": "Assembler",
-    "Duration": 10,
+    "Duration": 6,
     "OutputBatchSize": 1,
     "Inputs": [
       {
         "Name": "Turbine",
-        "Rate": 6.0
+        "Rate": 10.0
       },
       {
         "Name": "Battery",
-        "Rate": 6.0
+        "Rate": 10.0
       },
       {
         "Name": "Nozzle",
-        "Rate": 6.0
+        "Rate": 10.0
       }
     ],
     "Outputs": [
       {
         "Name": "Generator",
-        "Rate": 6.0
+        "Rate": 10.0
+      }
+    ]
+  },
+  {
+    "Name": "",
+    "Machine": "Assembler",
+    "Duration": 8,
+    "OutputBatchSize": 1,
+    "Inputs": [
+      {
+        "Name": "Lens",
+        "Rate": 7.5
+      },
+      {
+        "Name": "Resonator",
+        "Rate": 7.5
+      },
+      {
+        "Name": "Electromagnetic Coil",
+        "Rate": 22.5
+      }
+    ],
+    "Outputs": [
+      {
+        "Name": "Laser Emitter",
+        "Rate": 7.5
       }
     ]
   },
@@ -223,86 +249,60 @@
     "OutputBatchSize": 1,
     "Inputs": [
       {
-        "Name": "Lens",
-        "Rate": 10.0
-      },
-      {
-        "Name": "Resonator",
-        "Rate": 10.0
-      },
-      {
-        "Name": "Electromagnetic Coil",
-        "Rate": 60.0
-      }
-    ],
-    "Outputs": [
-      {
-        "Name": "Laser Emitter",
-        "Rate": 10.0
-      }
-    ]
-  },
-  {
-    "Name": "",
-    "Machine": "Assembler",
-    "Duration": 5,
-    "OutputBatchSize": 1,
-    "Inputs": [
-      {
         "Name": "Electronics",
-        "Rate": 12.0
+        "Rate": 10.0
       },
       {
         "Name": "Stabilizer",
-        "Rate": 24.0
+        "Rate": 20.0
       },
       {
         "Name": "Reinforced Housing",
-        "Rate": 12.0
+        "Rate": 10.0
       }
     ],
     "Outputs": [
       {
         "Name": "Onboard Instruments",
-        "Rate": 12.0
+        "Rate": 20.0
       }
     ]
   },
   {
     "Name": "",
     "Machine": "Assembler",
-    "Duration": 10,
+    "Duration": 6,
     "OutputBatchSize": 2,
     "Inputs": [
       {
         "Name": "Organic Compound",
-        "Rate": 12.0
+        "Rate": 20.0
       },
       {
         "Name": "Basic Fuel",
-        "Rate": 6.0
+        "Rate": 10.0
       },
       {
         "Name": "Plastic",
-        "Rate": 12.0
+        "Rate": 10.0
       }
     ],
     "Outputs": [
       {
         "Name": "Plastic Dust",
-        "Rate": 12.0
+        "Rate": 20.0
       }
     ]
   },
   {
     "Name": "",
     "Machine": "Assembler",
-    "Duration": 10,
+    "Duration": 12,
     "OutputBatchSize": 1,
     "Inputs": [
       {
         "Name": "Heat Resistant Sheet",
-        "Rate": 30.0
+        "Rate": 20.0
       },
       {
         "Name": "Valve",
@@ -310,13 +310,13 @@
       },
       {
         "Name": "Pump",
-        "Rate": 12.0
+        "Rate": 5.0
       }
     ],
     "Outputs": [
       {
         "Name": "Pressure Tank",
-        "Rate": 6.0
+        "Rate": 5.0
       }
     ]
   },
@@ -328,7 +328,7 @@
     "Inputs": [
       {
         "Name": "Plastic",
-        "Rate": 25.0
+        "Rate": 15.0
       },
       {
         "Name": "Epoxy",
@@ -349,52 +349,52 @@
   {
     "Name": "",
     "Machine": "Assembler",
-    "Duration": 10,
+    "Duration": 12,
     "OutputBatchSize": 1,
     "Inputs": [
       {
         "Name": "Accumulator",
-        "Rate": 6.0
+        "Rate": 5.0
       },
       {
         "Name": "Generator",
-        "Rate": 12.0
+        "Rate": 5.0
       },
       {
         "Name": "Liquid Helium",
-        "Rate": 12.0
+        "Rate": 10.0
       }
     ],
     "Outputs": [
       {
         "Name": "Resonator",
-        "Rate": 6.0
+        "Rate": 5.0
       }
     ]
   },
   {
     "Name": "",
     "Machine": "Assembler",
-    "Duration": 10,
+    "Duration": 12,
     "OutputBatchSize": 1,
     "Inputs": [
       {
         "Name": "Lens",
-        "Rate": 18.0
+        "Rate": 10.0
       },
       {
         "Name": "Generator",
-        "Rate": 18.0
+        "Rate": 5.0
       },
       {
         "Name": "Stabilizer",
-        "Rate": 72.0
+        "Rate": 30.0
       }
     ],
     "Outputs": [
       {
         "Name": "Scanner",
-        "Rate": 6.0
+        "Rate": 5.0
       }
     ]
   },
@@ -406,7 +406,7 @@
     "Inputs": [
       {
         "Name": "Calcium Powder",
-        "Rate": 90.0
+        "Rate": 60.0
       },
       {
         "Name": "Goethite Lattice",
@@ -432,11 +432,11 @@
     "Inputs": [
       {
         "Name": "Goethite Powder",
-        "Rate": 40.0
+        "Rate": 30.0
       },
       {
         "Name": "Calcium Powder",
-        "Rate": 60.0
+        "Rate": 40.0
       },
       {
         "Name": "Liquid Helium",
@@ -488,7 +488,7 @@
       },
       {
         "Name": "Goethite Powder",
-        "Rate": 60.0
+        "Rate": 40.0
       },
       {
         "Name": "Synthetic Resin",
@@ -536,11 +536,11 @@
     "Inputs": [
       {
         "Name": "Applicator",
-        "Rate": 40.0
+        "Rate": 20.0
       },
       {
         "Name": "Electromagnet",
-        "Rate": 10.0
+        "Rate": 5.0
       },
       {
         "Name": "Pressure Tank",
@@ -557,20 +557,20 @@
   {
     "Name": "",
     "Machine": "Compounder",
-    "Duration": 10,
+    "Duration": 8,
     "OutputBatchSize": 1,
     "Inputs": [
       {
         "Name": "Glass",
-        "Rate": 60.0
+        "Rate": 45.0
       },
       {
         "Name": "Hardening Agent",
-        "Rate": 36.0
+        "Rate": 22.5
       },
       {
         "Name": "Synthetic Resin",
-        "Rate": 24.0
+        "Rate": 15.0
       }
     ],
     "Outputs": [
@@ -598,7 +598,7 @@
     "Outputs": [
       {
         "Name": "Liquid Helium",
-        "Rate": 20.0
+        "Rate": 40.0
       }
     ]
   },
@@ -610,15 +610,15 @@
     "Inputs": [
       {
         "Name": "Tube",
-        "Rate": 200.0
+        "Rate": 120.0
       },
       {
         "Name": "Liquid Helium",
-        "Rate": 50.0
+        "Rate": 40.0
       },
       {
         "Name": "Wolfram Wire",
-        "Rate": 80.0
+        "Rate": 40.0
       }
     ],
     "Outputs": [
@@ -657,26 +657,26 @@
   {
     "Name": "",
     "Machine": "Compounder",
-    "Duration": 10,
+    "Duration": 8,
     "OutputBatchSize": 5,
     "Inputs": [
       {
         "Name": "Refined Oil",
-        "Rate": 18.0
+        "Rate": 22.5
       },
       {
         "Name": "Sulphuric Acid",
-        "Rate": 6.0
+        "Rate": 7.5
       },
       {
         "Name": "Chemicals",
-        "Rate": 6.0
+        "Rate": 7.5
       }
     ],
     "Outputs": [
       {
         "Name": "Plastic",
-        "Rate": 30.0
+        "Rate": 37.5
       }
     ]
   },
@@ -684,7 +684,7 @@
     "Name": "",
     "Machine": "Compounder",
     "Duration": 6,
-    "OutputBatchSize": 1,
+    "OutputBatchSize": 2,
     "Inputs": [
       {
         "Name": "Sulphuric Acid",
@@ -702,33 +702,7 @@
     "Outputs": [
       {
         "Name": "Substance #FHS-135-493",
-        "Rate": 10.0
-      }
-    ]
-  },
-  {
-    "Name": "",
-    "Machine": "Compounder",
-    "Duration": 5,
-    "OutputBatchSize": 1,
-    "Inputs": [
-      {
-        "Name": "Synthetic Resin",
-        "Rate": 48.0
-      },
-      {
-        "Name": "Electromagnet",
-        "Rate": 24.0
-      },
-      {
-        "Name": "Supermagnet",
-        "Rate": 72.0
-      }
-    ],
-    "Outputs": [
-      {
-        "Name": "Superconductor",
-        "Rate": 12.0
+        "Rate": 20.0
       }
     ]
   },
@@ -739,21 +713,21 @@
     "OutputBatchSize": 1,
     "Inputs": [
       {
-        "Name": "Organic Compound",
-        "Rate": 20.0
+        "Name": "Synthetic Resin",
+        "Rate": 40.0
       },
       {
-        "Name": "Substance #FHS-135-493",
+        "Name": "Electromagnet",
         "Rate": 10.0
       },
       {
-        "Name": "Sulphuric Acid",
-        "Rate": 20.0
+        "Name": "Supermagnet",
+        "Rate": 40.0
       }
     ],
     "Outputs": [
       {
-        "Name": "Synthetic Protein",
+        "Name": "Superconductor",
         "Rate": 10.0
       }
     ]
@@ -765,22 +739,48 @@
     "OutputBatchSize": 1,
     "Inputs": [
       {
-        "Name": "Hardening Agent",
+        "Name": "Organic Compound",
+        "Rate": 40.0
+      },
+      {
+        "Name": "Substance #FHS-135-493",
         "Rate": 20.0
       },
       {
         "Name": "Sulphuric Acid",
-        "Rate": 60.0
+        "Rate": 40.0
+      }
+    ],
+    "Outputs": [
+      {
+        "Name": "Synthetic Protein",
+        "Rate": 40.0
+      }
+    ]
+  },
+  {
+    "Name": "",
+    "Machine": "Compounder",
+    "Duration": 4,
+    "OutputBatchSize": 2,
+    "Inputs": [
+      {
+        "Name": "Hardening Agent",
+        "Rate": 15.0
+      },
+      {
+        "Name": "Sulphuric Acid",
+        "Rate": 30.0
       },
       {
         "Name": "Calcite Sheets",
-        "Rate": 120.0
+        "Rate": 90.0
       }
     ],
     "Outputs": [
       {
         "Name": "Synthetic Resin",
-        "Rate": 20.0
+        "Rate": 30.0
       }
     ]
   },
@@ -788,15 +788,15 @@
     "Name": "",
     "Machine": "Compounder v.2",
     "Duration": 3,
-    "OutputBatchSize": 5,
+    "OutputBatchSize": 6,
     "Inputs": [
       {
         "Name": "Pressurized Helium",
-        "Rate": 20.0
+        "Rate": 40.0
       },
       {
         "Name": "Hardening Agent",
-        "Rate": 20.0
+        "Rate": 40.0
       },
       {
         "Name": "Chemicals",
@@ -806,7 +806,7 @@
     "Outputs": [
       {
         "Name": "Liquid Helium",
-        "Rate": 100.0
+        "Rate": 120.0
       }
     ]
   },
@@ -814,25 +814,21 @@
     "Name": "",
     "Machine": "Compounder v.2",
     "Duration": 2,
-    "OutputBatchSize": 5,
+    "OutputBatchSize": 3,
     "Inputs": [
       {
         "Name": "Helium-3",
-        "Rate": 90.0
+        "Rate": 60.0
       },
       {
         "Name": "Sulphur Ore",
-        "Rate": 90.0
-      },
-      {
-        "Name": "Calcium Powder",
         "Rate": 60.0
       }
     ],
     "Outputs": [
       {
         "Name": "Pressurized Helium",
-        "Rate": 150.0
+        "Rate": 90.0
       }
     ]
   },
@@ -844,15 +840,11 @@
     "Inputs": [
       {
         "Name": "Sulphur Ore",
-        "Rate": 300.0
+        "Rate": 240.0
       },
       {
         "Name": "Chemicals",
-        "Rate": 60.0
-      },
-      {
-        "Name": "Wolfram Powder",
-        "Rate": 30.0
+        "Rate": 180.0
       }
     ],
     "Outputs": [
@@ -865,8 +857,8 @@
   {
     "Name": "",
     "Machine": "Compounder v.2",
-    "Duration": 3,
-    "OutputBatchSize": 3,
+    "Duration": 4,
+    "OutputBatchSize": 4,
     "Inputs": [
       {
         "Name": "Hardening Agent",
@@ -874,7 +866,7 @@
       },
       {
         "Name": "Sulphuric Acid",
-        "Rate": 100.0
+        "Rate": 60.0
       },
       {
         "Name": "Calcite Sheets",
@@ -884,6 +876,84 @@
     "Outputs": [
       {
         "Name": "Synthetic Resin",
+        "Rate": 60.0
+      }
+    ]
+  },
+  {
+    "Name": "",
+    "Machine": "Compounder v.2",
+    "Duration": 3,
+    "OutputBatchSize": 6,
+    "Inputs": [
+      {
+        "Name": "Liquid Helium",
+        "Rate": 40.0
+      },
+      {
+        "Name": "Goethite Powder",
+        "Rate": 40.0
+      },
+      {
+        "Name": "Synthetic Resin",
+        "Rate": 40.0
+      }
+    ],
+    "Outputs": [
+      {
+        "Name": "Epoxy",
+        "Rate": 120.0
+      }
+    ]
+  },  
+   {
+    "Name": "",
+    "Machine": "Compounder v.2",
+    "Duration": 8,
+    "OutputBatchSize": 3,
+    "Inputs": [
+      {
+        "Name": "Glass",
+        "Rate": 75.0
+      },
+      {
+        "Name": "Hardening Agent",
+        "Rate": 30.0
+      },
+      {
+        "Name": "Synthetic Resin",
+        "Rate": 30.0
+      }
+    ],
+    "Outputs": [
+      {
+        "Name": "Lens",
+        "Rate": 22.5
+      }
+    ]
+  },
+  {
+    "Name": "",
+    "Machine": "Compounder v.2",
+    "Duration": 6,
+    "OutputBatchSize": 6,
+    "Inputs": [
+      {
+        "Name": "Tube",
+        "Rate": 200.0
+      },
+      {
+        "Name": "Liquid Helium",
+        "Rate": 60.0
+      },
+      {
+        "Name": "Wolfram Wire",
+        "Rate": 60.0
+      }
+    ],
+    "Outputs": [
+      {
+        "Name": "Nanofibre",
         "Rate": 60.0
       }
     ]
@@ -1024,7 +1094,7 @@
       },
       {
         "Name": "Nanofibre",
-        "Rate": 6.0
+        "Rate": 24.0
       },
       {
         "Name": "Substance #FHS-135-493",
@@ -1058,7 +1128,7 @@
       },
       {
         "Name": "Sulphuric Acid",
-        "Rate": 15.0
+        "Rate": 10.0
       }
     ],
     "Outputs": [
@@ -1088,7 +1158,7 @@
       },
       {
         "Name": "Plastic",
-        "Rate": 20.0
+        "Rate": 10.0
       }
     ],
     "Outputs": [
@@ -1118,7 +1188,7 @@
       },
       {
         "Name": "Pseudorubber Insulator",
-        "Rate": 12.0
+        "Rate": 6.0
       }
     ],
     "Outputs": [
@@ -1136,7 +1206,7 @@
     "Inputs": [
       {
         "Name": "Liquid Helium",
-        "Rate": 30.0
+        "Rate": 15.0
       },
       {
         "Name": "Basic Fuel",
@@ -1148,7 +1218,7 @@
       },
       {
         "Name": "Refined Oil",
-        "Rate": 40.0
+        "Rate": 20.0
       }
     ],
     "Outputs": [
@@ -1166,7 +1236,7 @@
     "Inputs": [
       {
         "Name": "Uberfilament",
-        "Rate": 12.0
+        "Rate": 6.0
       },
       {
         "Name": "Reinforced Frame",
@@ -1191,68 +1261,104 @@
   {
     "Name": "",
     "Machine": "Constructorizer v.2",
-    "Duration": 10,
+    "Duration": 12,
     "OutputBatchSize": 2,
     "Inputs": [
       {
         "Name": "Resonator",
-        "Rate": 6.0
+        "Rate": 5.0
       },
       {
         "Name": "Pump",
-        "Rate": 6.0
+        "Rate": 10.0
       },
       {
         "Name": "Nanofibre",
-        "Rate": 12.0
-      },
-      {
-        "Name": "Reinforced Housing",
-        "Rate": 6.0
-      },
-      {
-        "Name": "Basic Fuel",
-        "Rate": 18.0
+        "Rate": 40.0
       }
     ],
     "Outputs": [
       {
         "Name": "Condenser",
-        "Rate": 12.0
+        "Rate": 10.0
       }
     ]
   },
   {
     "Name": "",
     "Machine": "Constructorizer v.2",
-    "Duration": 10,
+    "Duration": 12,
     "OutputBatchSize": 2,
     "Inputs": [
       {
         "Name": "Applicator",
-        "Rate": 24.0
+        "Rate": 40.0
       },
       {
         "Name": "Electromagnet",
-        "Rate": 6.0
+        "Rate": 10.0
       },
       {
         "Name": "Pressure Tank",
-        "Rate": 6.0
-      },
-      {
-        "Name": "Goethite Lattice",
-        "Rate": 6.0
-      },
-      {
-        "Name": "Plastic",
-        "Rate": 6.0
+        "Rate": 5.0
       }
     ],
     "Outputs": [
       {
         "Name": "Ion Injector",
-        "Rate": 12.0
+        "Rate": 10.0
+      }
+    ]
+  },
+  {
+    "Name": "",
+    "Machine": "Constructorizer v.2",
+    "Duration": 8,
+    "OutputBatchSize": 2,
+    "Inputs": [
+      {
+        "Name": "Lens",
+        "Rate": 15.0
+      },
+      {
+        "Name": "Resonator",
+        "Rate": 7.5
+      },
+      {
+        "Name": "Electromagnetic Coil",
+        "Rate": 30.0
+      }
+    ],
+    "Outputs": [
+      {
+        "Name": "Laser Emitter",
+        "Rate": 15.0
+      }
+    ]
+  },
+  {
+    "Name": "",
+    "Machine": "Constructorizer v.2",
+    "Duration": 8,
+    "OutputBatchSize": 2,
+    "Inputs": [
+      {
+        "Name": "Lens",
+        "Rate": 30.0
+      },
+      {
+        "Name": "Generator",
+        "Rate": 10.0
+      },
+      {
+        "Name": "Stabilizer",
+        "Rate": 40.0
+      }
+    ],
+    "Outputs": [
+      {
+        "Name": "Scanner",
+        "Rate": 15.0
       }
     ]
   },
@@ -1263,98 +1369,22 @@
     "OutputBatchSize": 2,
     "Inputs": [
       {
-        "Name": "Lens",
-        "Rate": 10.0
-      },
-      {
-        "Name": "Resonator",
-        "Rate": 10.0
-      },
-      {
-        "Name": "Electromagnetic Coil",
-        "Rate": 30.0
-      },
-      {
-        "Name": "Explosive Charge",
-        "Rate": 10.0
-      },
-      {
-        "Name": "Epoxy",
-        "Rate": 10.0
-      }
-    ],
-    "Outputs": [
-      {
-        "Name": "Laser Emitter",
-        "Rate": 20.0
-      }
-    ]
-  },
-  {
-    "Name": "",
-    "Machine": "Constructorizer v.2",
-    "Duration": 10,
-    "OutputBatchSize": 2,
-    "Inputs": [
-      {
-        "Name": "Lens",
-        "Rate": 12.0
-      },
-      {
-        "Name": "Generator",
-        "Rate": 12.0
-      },
-      {
-        "Name": "Stabilizer",
-        "Rate": 36.0
-      },
-      {
-        "Name": "Uberfilament",
-        "Rate": 6.0
-      },
-      {
-        "Name": "Pseudorubber Insulator",
-        "Rate": 18.0
-      }
-    ],
-    "Outputs": [
-      {
-        "Name": "Scanner",
-        "Rate": 12.0
-      }
-    ]
-  },
-  {
-    "Name": "",
-    "Machine": "Constructorizer v.2",
-    "Duration": 5,
-    "OutputBatchSize": 2,
-    "Inputs": [
-      {
         "Name": "Synthetic Resin",
-        "Rate": 24.0
+        "Rate": 60.0
       },
       {
         "Name": "Electromagnet",
-        "Rate": 12.0
+        "Rate": 20.0
       },
       {
         "Name": "Supermagnet",
-        "Rate": 36.0
-      },
-      {
-        "Name": "Aerogel",
-        "Rate": 24.0
-      },
-      {
-        "Name": "Heat Shield",
-        "Rate": 24.0
+        "Rate": 80.0
       }
     ],
     "Outputs": [
       {
         "Name": "Superconductor",
-        "Rate": 24.0
+        "Rate": 20.0
       }
     ]
   },
@@ -1362,11 +1392,11 @@
     "Name": "",
     "Machine": "Fabricator",
     "Duration": 4,
-    "OutputBatchSize": 1,
+    "OutputBatchSize": 2,
     "Inputs": [
       {
         "Name": "Tube",
-        "Rate": 120.0
+        "Rate": 90.0
       },
       {
         "Name": "Glass",
@@ -1376,7 +1406,7 @@
     "Outputs": [
       {
         "Name": "Applicator",
-        "Rate": 15.0
+        "Rate": 30.0
       }
     ]
   },
@@ -1442,7 +1472,7 @@
     "Name": "",
     "Machine": "Fabricator",
     "Duration": 6,
-    "OutputBatchSize": 1,
+    "OutputBatchSize": 2,
     "Inputs": [
       {
         "Name": "Titanium Rod",
@@ -1456,7 +1486,7 @@
     "Outputs": [
       {
         "Name": "Rotor",
-        "Rate": 10.0
+        "Rate": 20.0
       }
     ]
   },
@@ -1526,17 +1556,17 @@
     "Name": "",
     "Machine": "Fabricator",
     "Duration": 2,
-    "OutputBatchSize": 1,
+    "OutputBatchSize": 2,
     "Inputs": [
       {
         "Name": "Titanium Bar",
-        "Rate": 30.0
+        "Rate": 60.0
       }
     ],
     "Outputs": [
       {
         "Name": "Titanium Rod",
-        "Rate": 30.0
+        "Rate": 60.0
       }
     ]
   },
@@ -1562,8 +1592,8 @@
     "Name": "",
     "Machine": "Fabricator",
     "Duration": 2,
-    "OutputBatchSize": 2,
-    "Preferred":  true,
+    "OutputBatchSize": 4,
+    "Preferred": true,
     "Inputs": [
       {
         "Name": "Titanium Rod",
@@ -1577,7 +1607,7 @@
     "Outputs": [
       {
         "Name": "Tube",
-        "Rate": 60.0
+        "Rate": 120.0
       }
     ]
   },
@@ -1589,7 +1619,7 @@
     "Inputs": [
       {
         "Name": "Wolfram Bar",
-        "Rate": 60.0
+        "Rate": 30.0
       }
     ],
     "Outputs": [
@@ -1621,25 +1651,21 @@
     "Name": "",
     "Machine": "Fabricator v.2",
     "Duration": 6,
-    "OutputBatchSize": 6,
+    "OutputBatchSize": 4,
     "Inputs": [
       {
         "Name": "Titanium Rod",
-        "Rate": 10.0
+        "Rate": 30.0
       },
       {
         "Name": "Wolfram Wire",
-        "Rate": 20.0
-      },
-      {
-        "Name": "Wolfram Plate",
-        "Rate": 10.0
+        "Rate": 30.0
       }
     ],
     "Outputs": [
       {
         "Name": "Rotor",
-        "Rate": 60.0
+        "Rate": 40.0
       }
     ]
   },
@@ -1647,25 +1673,21 @@
     "Name": "",
     "Machine": "Fabricator v.2",
     "Duration": 3,
-    "OutputBatchSize": 3,
+    "OutputBatchSize": 2,
     "Inputs": [
       {
         "Name": "Titanium Housing",
-        "Rate": 20.0
+        "Rate": 40.0
       },
       {
         "Name": "Wolfram Wire",
-        "Rate": 20.0
-      },
-      {
-        "Name": "Titanium Sheet",
-        "Rate": 20.0
+        "Rate": 40.0
       }
     ],
     "Outputs": [
       {
         "Name": "Stator",
-        "Rate": 60.0
+        "Rate": 40.0
       }
     ]
   },
@@ -1673,17 +1695,17 @@
     "Name": "",
     "Machine": "Fabricator v.2",
     "Duration": 2,
-    "OutputBatchSize": 4,
+    "OutputBatchSize": 6,
     "Inputs": [
       {
         "Name": "Titanium Bar",
-        "Rate": 60.0
+        "Rate": 90.0
       }
     ],
     "Outputs": [
       {
         "Name": "Titanium Rod",
-        "Rate": 120.0
+        "Rate": 180.0
       }
     ]
   },
@@ -1709,7 +1731,7 @@
     "Name": "",
     "Machine": "Fabricator v.2",
     "Duration": 2,
-    "OutputBatchSize": 8,
+    "OutputBatchSize": 16,
     "Inputs": [
       {
         "Name": "Goethite Ingot",
@@ -1717,17 +1739,13 @@
       },
       {
         "Name": "Titanium Sheet",
-        "Rate": 30.0
-      },
-      {
-        "Name": "Wolfram Powder",
-        "Rate": 30.0
+        "Rate": 90.0
       }
     ],
     "Outputs": [
       {
         "Name": "Tube",
-        "Rate": 240.0
+        "Rate": 480.0
       }
     ]
   },
@@ -1735,21 +1753,17 @@
     "Name": "",
     "Machine": "Fabricator v.2",
     "Duration": 2,
-    "OutputBatchSize": 5,
+    "OutputBatchSize": 6,
     "Inputs": [
       {
         "Name": "Wolfram Bar",
-        "Rate": 60.0
-      },
-      {
-        "Name": "Wolfram Powder",
-        "Rate": 30.0
+        "Rate": 90.0
       }
     ],
     "Outputs": [
       {
         "Name": "Wolfram Plate",
-        "Rate": 150.0
+        "Rate": 180.0
       }
     ]
   },
@@ -1773,103 +1787,205 @@
   },
   {
     "Name": "",
+    "Machine": "Fabricator v.2",
+    "Duration": 4,
+    "OutputBatchSize": 4,
+    "Inputs": [
+      {
+        "Name": "Tube",
+        "Rate": 150.0
+      },
+      {
+        "Name": "Glass",
+        "Rate": 45.0
+      }
+    ],
+    "Outputs": [
+      {
+        "Name": "Applicator",
+        "Rate": 60.0
+      }
+    ]
+  },
+  {
+    "Name": "",
+    "Machine": "Fabricator v.2",
+    "Duration": 2,
+    "OutputBatchSize": 6,
+    "Inputs": [
+      {
+        "Name": "Calcium Block",
+        "Rate": 90.0
+      }
+    ],
+    "Outputs": [
+      {
+        "Name": "Calcite Sheets",
+        "Rate": 180.0
+      }
+    ]
+  },
+  {
+    "Name": "",
+    "Machine": "Fabricator v.2",
+    "Duration": 3,
+    "OutputBatchSize": 3,
+    "Inputs": [
+      {
+        "Name": "Rotor",
+        "Rate": 20.0
+      },
+      {
+        "Name": "Titanium Rod",
+        "Rate": 60.0
+      }
+    ],
+    "Outputs": [
+      {
+        "Name": "Stabilizer",
+        "Rate": 60.0
+      }
+    ]
+  },
+  {
+    "Name": "",
+    "Machine": "Fabricator v.2",
+    "Duration": 3,
+    "OutputBatchSize": 6,
+    "Inputs": [
+      {
+        "Name": "Titanium Bar",
+        "Rate": 60.0
+      }
+    ],
+    "Outputs": [
+      {
+        "Name": "Titanium Beam",
+        "Rate": 120.0
+      }
+    ]
+  },
+  {
+    "Name": "",
+    "Machine": "Fabricator v.2",
+    "Duration": 2,
+    "OutputBatchSize": 10,
+    "Inputs": [
+      {
+        "Name": "Titanium Rod",
+        "Rate": 60.0
+      },
+      {
+        "Name": "Titanium Sheet",
+        "Rate": 60.0
+      }
+    ],
+    "Outputs": [
+      {
+        "Name": "Tube",
+        "Rate": 300.0
+      }
+    ]
+  },
+  {
+    "Name": "",
     "Machine": "Facturer",
-    "Duration": 15,
+    "Duration": 16,
     "OutputBatchSize": 1,
     "Inputs": [
       {
         "Name": "Synthetic Protein",
-        "Rate": 8.0
+        "Rate": 3.75
       },
       {
         "Name": "RNA Stabilizer",
-        "Rate": 4.0
+        "Rate": 3.75
       },
       {
         "Name": "Substance #FHS-135-493",
-        "Rate": 16.0
+        "Rate": 7.5
       },
       {
         "Name": "Nanofibre",
-        "Rate": 32.0
+        "Rate": 15.0
       },
       {
         "Name": "Superconductor",
-        "Rate": 8.0
+        "Rate": 3.75
       }
     ],
     "Outputs": [
       {
         "Name": "Biofilament",
-        "Rate": 4.0
+        "Rate": 3.75
       }
     ]
   },
   {
     "Name": "",
     "Machine": "Facturer",
-    "Duration": 15,
+    "Duration": 16,
     "OutputBatchSize": 1,
     "Inputs": [
       {
         "Name": "Laser Emitter",
-        "Rate": 8.0
+        "Rate": 3.75
       },
       {
         "Name": "Accumulator",
-        "Rate": 4.0
+        "Rate": 3.75
       },
       {
         "Name": "Electromagnetic Coil",
-        "Rate": 16.0
+        "Rate": 7.5
       },
       {
         "Name": "Plastic",
-        "Rate": 12.0
+        "Rate": 7.5
       },
       {
         "Name": "RTSC",
-        "Rate": 4.0
+        "Rate": 3.75
       }
     ],
     "Outputs": [
       {
         "Name": "Converter",
-        "Rate": 4.0
+        "Rate": 3.75
       }
     ]
   },
   {
     "Name": "",
     "Machine": "Facturer",
-    "Duration": 15,
+    "Duration": 16,
     "OutputBatchSize": 1,
     "Inputs": [
       {
         "Name": "Aerogel",
-        "Rate": 32.0
+        "Rate": 15.0
       },
       {
         "Name": "Electromagnet",
-        "Rate": 4.0
+        "Rate": 3.75
       },
       {
         "Name": "Ion Injector",
-        "Rate": 8.0
+        "Rate": 7.5
       },
       {
         "Name": "Reinforced Housing",
-        "Rate": 20.0
+        "Rate": 11.25
       },
       {
         "Name": "Plastic Dust",
-        "Rate": 20.0
+        "Rate": 3.75
       }
     ],
     "Outputs": [
       {
         "Name": "Cyclotrone",
-        "Rate": 4.0
+        "Rate": 3.75
       }
     ]
   },
@@ -1881,11 +1997,11 @@
     "Inputs": [
       {
         "Name": "Uberfilament",
-        "Rate": 24.0
+        "Rate": 6.0
       },
       {
         "Name": "Condenser",
-        "Rate": 6.0
+        "Rate": 3.0
       },
       {
         "Name": "Airlock",
@@ -1893,7 +2009,7 @@
       },
       {
         "Name": "Scafolding",
-        "Rate": 12.0
+        "Rate": 9.0
       },
       {
         "Name": "Converter",
@@ -1915,7 +2031,7 @@
     "Inputs": [
       {
         "Name": "Ion Injector",
-        "Rate": 6.0
+        "Rate": 3.0
       },
       {
         "Name": "Ion Stabilizer",
@@ -1923,7 +2039,7 @@
       },
       {
         "Name": "Explosive Charge",
-        "Rate": 18.0
+        "Rate": 9.0
       },
       {
         "Name": "Tracking Device",
@@ -1931,7 +2047,7 @@
       },
       {
         "Name": "Resonator",
-        "Rate": 3.0
+        "Rate": 6.0
       }
     ],
     "Outputs": [
@@ -1949,19 +2065,19 @@
     "Inputs": [
       {
         "Name": "RTSC",
-        "Rate": 6.0
+        "Rate": 3.0
       },
       {
         "Name": "Generator",
-        "Rate": 12.0
-      },
-      {
-        "Name": "Laser Emitter",
         "Rate": 6.0
       },
       {
+        "Name": "Laser Emitter",
+        "Rate": 3.0
+      },
+      {
         "Name": "Anti-Radiation Covers",
-        "Rate": 12.0
+        "Rate": 6.0
       },
       {
         "Name": "Cyclotrone",
@@ -1978,34 +2094,34 @@
   {
     "Name": "",
     "Machine": "Facturer",
-    "Duration": 15,
+    "Duration": 16,
     "OutputBatchSize": 1,
     "Inputs": [
       {
         "Name": "Nozzle",
-        "Rate": 8.0
+        "Rate": 15.0
       },
       {
         "Name": "Turbine",
-        "Rate": 4.0
+        "Rate": 3.75
       },
       {
         "Name": "Pump",
-        "Rate": 12.0
+        "Rate": 7.5
       },
       {
         "Name": "Rocket Fuel",
-        "Rate": 20.0
+        "Rate": 11.25
       },
       {
         "Name": "Condenser",
-        "Rate": 4.0
+        "Rate": 3.75
       }
     ],
     "Outputs": [
       {
         "Name": "Rocket Engine",
-        "Rate": 4.0
+        "Rate": 3.75
       }
     ]
   },
@@ -2017,15 +2133,15 @@
     "Inputs": [
       {
         "Name": "Onboard Instruments",
-        "Rate": 12.0
+        "Rate": 9.0
       },
       {
         "Name": "Scanner",
-        "Rate": 6.0
+        "Rate": 3.0
       },
       {
         "Name": "Ion Thrusters",
-        "Rate": 6.0
+        "Rate": 3.0
       },
       {
         "Name": "Rocket Engine",
@@ -2033,7 +2149,7 @@
       },
       {
         "Name": "Heat Shield",
-        "Rate": 18.0
+        "Rate": 9.0
       }
     ],
     "Outputs": [
@@ -2051,19 +2167,19 @@
     "Inputs": [
       {
         "Name": "Synthetic Protein",
-        "Rate": 30.0
+        "Rate": 12.0
       },
       {
         "Name": "Substance #FHS-135-493",
-        "Rate": 18.0
+        "Rate": 6.0
       },
       {
         "Name": "Nanosyringe",
-        "Rate": 15.0
+        "Rate": 3.0
       },
       {
         "Name": "Plastic",
-        "Rate": 30.0
+        "Rate": 9.0
       },
       {
         "Name": "Biofilament",
@@ -2156,7 +2272,7 @@
     "Name": "",
     "Machine": "Furnace",
     "Duration": 2,
-    "OutputBatchSize": 2,
+    "OutputBatchSize": 4,
     "Inputs": [
       {
         "Name": "Synthetic Silicon",
@@ -2174,33 +2290,33 @@
     "Outputs": [
       {
         "Name": "Chemicals",
-        "Rate": 60.0
+        "Rate": 120.0
       }
     ]
   },
   {
     "Name": "",
     "Machine": "Furnace",
-    "Duration": 5,
+    "Duration": 6,
     "OutputBatchSize": 1,
     "Inputs": [
       {
         "Name": "Synthetic Silicon",
-        "Rate": 24.0
+        "Rate": 20.0
       },
       {
         "Name": "Inductor",
-        "Rate": 12.0
+        "Rate": 10.0
       },
       {
         "Name": "Stator",
-        "Rate": 12.0
+        "Rate": 10.0
       }
     ],
     "Outputs": [
       {
         "Name": "Electronics",
-        "Rate": 12.0
+        "Rate": 10.0
       }
     ]
   },
@@ -2208,7 +2324,7 @@
     "Name": "",
     "Machine": "Furnace",
     "Duration": 3,
-    "OutputBatchSize": 1,
+    "OutputBatchSize": 2,
     "Inputs": [
       {
         "Name": "Helium-3",
@@ -2222,7 +2338,7 @@
     "Outputs": [
       {
         "Name": "Glass",
-        "Rate": 20.0
+        "Rate": 40.0
       }
     ]
   },
@@ -2234,7 +2350,7 @@
     "Inputs": [
       {
         "Name": "Sulphuric Acid",
-        "Rate": 75.0
+        "Rate": 60.0
       },
       {
         "Name": "Synthetic Silicon",
@@ -2256,7 +2372,7 @@
     "Name": "",
     "Machine": "Furnace",
     "Duration": 4,
-    "OutputBatchSize": 1,
+    "OutputBatchSize": 2,
     "Inputs": [
       {
         "Name": "Wolfram Plate",
@@ -2274,7 +2390,7 @@
     "Outputs": [
       {
         "Name": "Heat Resistant Sheet",
-        "Rate": 15.0
+        "Rate": 30.0
       }
     ]
   },
@@ -2312,11 +2428,11 @@
     "Inputs": [
       {
         "Name": "Sulphuric Acid",
-        "Rate": 80.0
+        "Rate": 60.0
       },
       {
         "Name": "Wolfram Plate",
-        "Rate": 80.0
+        "Rate": 60.0
       },
       {
         "Name": "Chemicals",
@@ -2422,15 +2538,11 @@
     "Inputs": [
       {
         "Name": "Calcite Sheets",
-        "Rate": 30.0
-      },
-      {
-        "Name": "Helium-3",
         "Rate": 60.0
       },
       {
         "Name": "Wolfram Powder",
-        "Rate": 30.0
+        "Rate": 60.0
       }
     ],
     "Outputs": [
@@ -2444,7 +2556,7 @@
     "Name": "",
     "Machine": "Furnace v.2",
     "Duration": 2,
-    "OutputBatchSize": 4,
+    "OutputBatchSize": 16,
     "Inputs": [
       {
         "Name": "Calcium Powder",
@@ -2466,7 +2578,7 @@
     "Outputs": [
       {
         "Name": "Chemicals",
-        "Rate": 120.0
+        "Rate": 480.0
       }
     ]
   },
@@ -2474,7 +2586,7 @@
     "Name": "",
     "Machine": "Furnace v.2",
     "Duration": 3,
-    "OutputBatchSize": 4,
+    "OutputBatchSize": 16,
     "Inputs": [
       {
         "Name": "Pressurized Helium",
@@ -2492,7 +2604,7 @@
     "Outputs": [
       {
         "Name": "Glass",
-        "Rate": 80.0
+        "Rate": 320.0
       }
     ]
   },
@@ -2500,29 +2612,25 @@
     "Name": "",
     "Machine": "Furnace v.2",
     "Duration": 4,
-    "OutputBatchSize": 5,
+    "OutputBatchSize": 6,
     "Inputs": [
       {
         "Name": "Sulphuric Acid",
-        "Rate": 30.0
+        "Rate": 60.0
       },
       {
         "Name": "Synthetic Silicon",
-        "Rate": 15.0
+        "Rate": 30.0
       },
       {
         "Name": "Applicator",
-        "Rate": 15.0
-      },
-      {
-        "Name": "Pressurized Helium",
-        "Rate": 15.0
+        "Rate": 30.0
       }
     ],
     "Outputs": [
       {
         "Name": "Hardening Agent",
-        "Rate": 75.0
+        "Rate": 90.0
       }
     ]
   },
@@ -2548,7 +2656,7 @@
     "Outputs": [
       {
         "Name": "Heat Resistant Sheet",
-        "Rate": 75.0
+        "Rate": 180.0
       }
     ]
   },
@@ -2567,6 +2675,206 @@
       {
         "Name": "Wolfram Powder",
         "Rate": 300.0
+      }
+    ]
+  },
+  {
+    "Name": "",
+    "Machine": "Furnace v.2",
+    "Duration": 2,
+    "OutputBatchSize": 8,
+    "Inputs": [
+      {
+        "Name": "Synthetic Silicon",
+        "Rate": 30.0
+      },
+      {
+        "Name": "Wolfram Powder",
+        "Rate": 150.0
+      },
+      {
+        "Name": "Helium-3",
+        "Rate": 60.0
+      }
+    ],
+    "Outputs": [
+      {
+        "Name": "Chemicals",
+        "Rate": 240.0
+      }
+    ]
+  },
+  {
+    "Name": "",
+    "Machine": "Furnace v.2",
+    "Duration": 6,
+    "OutputBatchSize": 3,
+    "Inputs": [
+      {
+        "Name": "Synthetic Silicon",
+        "Rate": 20.0
+      },
+      {
+        "Name": "Inductor",
+        "Rate": 20.0
+      },
+      {
+        "Name": "Stator",
+        "Rate": 10.0
+      }
+    ],
+    "Outputs": [
+      {
+        "Name": "Electronics",
+        "Rate": 30.0
+      }
+    ]
+  },
+  {
+    "Name": "",
+    "Machine": "Furnace v.2",
+    "Duration": 3,
+    "OutputBatchSize": 4,
+    "Inputs": [
+      {
+        "Name": "Helium-3",
+        "Rate": 40.0
+      },
+      {
+        "Name": "Calcium Powder",
+        "Rate": 60.0
+      }
+    ],
+    "Outputs": [
+      {
+        "Name": "Glass",
+        "Rate": 80.0
+      }
+    ]
+  },
+  {
+    "Name": "",
+    "Machine": "Furnace v.2",
+    "Duration": 4,
+    "OutputBatchSize": 4,
+    "Inputs": [
+      {
+        "Name": "Wolfram Plate",
+        "Rate": 45.0
+      },
+      {
+        "Name": "Titanium Sheet",
+        "Rate": 45.0
+      },
+      {
+        "Name": "Glass",
+        "Rate": 15.0
+      }
+    ],
+    "Outputs": [
+      {
+        "Name": "Heat Resistant Sheet",
+        "Rate": 60.0
+      }
+    ]
+  },
+  {
+    "Name": "",
+    "Machine": "Furnace v.2",
+    "Duration": 4,
+    "OutputBatchSize": 4,
+    "Inputs": [
+      {
+        "Name": "Tube",
+        "Rate": 60.0
+      },
+      {
+        "Name": "Wolfram Wire",
+        "Rate": 30.0
+      },
+      {
+        "Name": "Ceramics",
+        "Rate": 30.0
+      }
+    ],
+    "Outputs": [
+      {
+        "Name": "Inductor",
+        "Rate": 60.0
+      }
+    ]
+  },
+  {
+    "Name": "",
+    "Machine": "Furnace v.2",
+    "Duration": 3,
+    "OutputBatchSize": 2,
+    "Inputs": [
+      {
+        "Name": "Sulphuric Acid",
+        "Rate": 80.0
+      },
+      {
+        "Name": "Wolfram Plate",
+        "Rate": 80.0
+      },
+      {
+        "Name": "Chemicals",
+        "Rate": 40.0
+      }
+    ],
+    "Outputs": [
+      {
+        "Name": "Supermagnet",
+        "Rate": 40.0
+      }
+    ]
+  },
+  {
+    "Name": "",
+    "Machine": "Furnace v.2",
+    "Duration": 2,
+    "OutputBatchSize": 4,
+    "Inputs": [
+      {
+        "Name": "Calcium Powder",
+        "Rate": 90.0
+      },
+      {
+        "Name": "Helium-3",
+        "Rate": 90.0
+      },
+      {
+        "Name": "Ceramics",
+        "Rate": 60.0
+      }
+    ],
+    "Outputs": [
+      {
+        "Name": "Synthetic Silicon",
+        "Rate": 120.0
+      }
+    ]
+  },
+  {
+    "Name": "",
+    "Machine": "Furnace v.2",
+    "Duration": 2,
+    "OutputBatchSize": 2,
+    "Inputs": [
+      {
+        "Name": "Titanium Beam",
+        "Rate": 90.0
+      },
+      {
+        "Name": "Titanium Sheet",
+        "Rate": 60.0
+      }
+    ],
+    "Outputs": [
+      {
+        "Name": "Titanium Housing",
+        "Rate": 60.0
       }
     ]
   },
@@ -2600,7 +2908,7 @@
     "Name": "",
     "Machine": "Mega Press",
     "Duration": 4,
-    "OutputBatchSize": 1,
+    "OutputBatchSize": 2,
     "Inputs": [
       {
         "Name": "Inductor",
@@ -2622,7 +2930,7 @@
     "Outputs": [
       {
         "Name": "Electromagnetic Coil",
-        "Rate": 15.0
+        "Rate": 30.0
       }
     ]
   },
@@ -2630,11 +2938,11 @@
     "Name": "",
     "Machine": "Mega Press",
     "Duration": 3,
-    "OutputBatchSize": 2,
+    "OutputBatchSize": 3,
     "Inputs": [
       {
         "Name": "Goethite Ingot",
-        "Rate": 40.0
+        "Rate": 20.0
       },
       {
         "Name": "Titanoferrite Ingot",
@@ -2648,7 +2956,7 @@
     "Outputs": [
       {
         "Name": "Goethite Lattice",
-        "Rate": 40.0
+        "Rate": 60.0
       }
     ]
   },
@@ -2660,19 +2968,19 @@
     "Inputs": [
       {
         "Name": "Epoxy",
-        "Rate": 18.0
+        "Rate": 12.0
       },
       {
         "Name": "Aerogel",
-        "Rate": 18.0
+        "Rate": 12.0
       },
       {
         "Name": "Uberfilament",
-        "Rate": 18.0
+        "Rate": 6.0
       },
       {
         "Name": "Reinforced Frame",
-        "Rate": 12.0
+        "Rate": 6.0
       }
     ],
     "Outputs": [
@@ -2767,112 +3075,112 @@
   {
     "Name": "",
     "Machine": "Mega Press",
-    "Duration": 10,
+    "Duration": 8,
     "OutputBatchSize": 1,
     "Inputs": [
       {
         "Name": "Epoxy",
-        "Rate": 6.0
+        "Rate": 7.5
       },
       {
         "Name": "Liquid Helium",
-        "Rate": 18.0
+        "Rate": 22.5
       },
       {
         "Name": "Onboard Instruments",
-        "Rate": 6.0
+        "Rate": 7.5
       },
       {
         "Name": "Explosive Charge",
-        "Rate": 6.0
+        "Rate": 7.5
       }
     ],
     "Outputs": [
       {
         "Name": "Ion Stabilizer",
-        "Rate": 6.0
+        "Rate": 7.5
       }
     ]
   },
   {
     "Name": "",
     "Machine": "Mega Press",
-    "Duration": 5,
-    "OutputBatchSize": 1,
+    "Duration": 6,
+    "OutputBatchSize": 2,
     "Inputs": [
       {
         "Name": "Heat Resistant Sheet",
-        "Rate": 24.0
+        "Rate": 20.0
       },
       {
         "Name": "Helium-3",
-        "Rate": 72.0
+        "Rate": 60.0
       },
       {
         "Name": "Stabilizer",
-        "Rate": 12.0
+        "Rate": 10.0
       }
     ],
     "Outputs": [
       {
         "Name": "Nozzle",
-        "Rate": 12.0
+        "Rate": 20.0
       }
     ]
   },
   {
     "Name": "",
     "Machine": "Mega Press",
-    "Duration": 10,
+    "Duration": 6,
     "OutputBatchSize": 1,
     "Inputs": [
       {
         "Name": "Valve",
-        "Rate": 6.0
+        "Rate": 10.0
       },
       {
         "Name": "Turbine",
-        "Rate": 6.0
+        "Rate": 10.0
       },
       {
         "Name": "Impeller",
-        "Rate": 6.0
+        "Rate": 10.0
       },
       {
         "Name": "Sulphuric Acid",
-        "Rate": 18.0
+        "Rate": 20.0
       }
     ],
     "Outputs": [
       {
         "Name": "Pump",
-        "Rate": 6.0
+        "Rate": 10.0
       }
     ]
   },
   {
     "Name": "",
     "Machine": "Mega Press",
-    "Duration": 5,
+    "Duration": 6,
     "OutputBatchSize": 1,
     "Inputs": [
       {
         "Name": "Tube",
-        "Rate": 48.0
+        "Rate": 40.0
       },
       {
         "Name": "Titanoferrite Ingot",
-        "Rate": 48.0
+        "Rate": 20.0
       },
       {
         "Name": "Titanium Beam",
-        "Rate": 24.0
+        "Rate": 20.0
       }
     ],
     "Outputs": [
       {
         "Name": "Reinforced Frame",
-        "Rate": 12.0
+        "Rate": 20.0
       }
     ]
   },
@@ -2888,7 +3196,7 @@
       },
       {
         "Name": "Wolfram Steel Ingot",
-        "Rate": 60.0
+        "Rate": 30.0
       },
       {
         "Name": "Wolfram Plate",
@@ -2898,7 +3206,7 @@
     "Outputs": [
       {
         "Name": "Reinforced Housing",
-        "Rate": 15.0
+        "Rate": 45.0
       }
     ]
   },
@@ -2979,30 +3287,30 @@
   {
     "Name": "",
     "Machine": "Mega Press",
-    "Duration": 10,
+    "Duration": 6,
     "OutputBatchSize": 1,
     "Inputs": [
       {
         "Name": "Titanium Housing",
-        "Rate": 6.0
+        "Rate": 10.0
       },
       {
         "Name": "Titanium Beam",
-        "Rate": 18.0
+        "Rate": 30.0
       },
       {
         "Name": "Titanium Rod",
-        "Rate": 12.0
+        "Rate": 20.0
       },
       {
         "Name": "Nozzle",
-        "Rate": 6.0
+        "Rate": 10.0
       }
     ],
     "Outputs": [
       {
         "Name": "Valve",
-        "Rate": 6.0
+        "Rate": 10.0
       }
     ]
   },
